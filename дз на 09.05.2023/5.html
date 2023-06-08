@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ДЗ 5 на 09.05.2023</title>
+</head>
+<body>
+<style>
+    input, button {
+        width: 90px;
+        height: 40px;
+        padding: 10px;
+        border-radius: 10px;
+        -moz-border-radius: 10px;
+        -webkit-border-radius: 10px;
+        margin: 10px
+    }
+</style>
+<script lang="javascript">
+    var op;
+
+    function func() {
+        var result;
+
+        var num1 = Number(document.getElementById("num1").value);
+        var num2 = Number(document.getElementById("num2").value);
+
+        switch (op) {
+            case '+':
+                result = num1 + num2;
+                break;
+            case '-':
+                result = num1 - num2;
+                break;
+            case '*':
+                result = num1 * num2;
+                break;
+            case '/':
+                result = num1 / num2;
+                break;
+        }
+        document.getElementById("result").innerHTML = "Резульатат: " + result;
+    }
+</script>
+<div id="nmbrs">
+    <input type="number" id="num1" />
+    <br>
+    <input type="number" id="num2" />
+</div>
+<div id="acts">
+    <button id="+" onclick="op='+'">+</button>
+    <button id="-" onclick="op='-'">-</button>
+    <button id="x" onclick="op='*'">x</button>
+    <button id=":" onclick="op='/'">:</button>
+    <br>
+    <button id="enter" onclick="func()">=</button>
+</div>
+<div>
+    <p id="result"></p>
+</div>
+</body>
+</html>

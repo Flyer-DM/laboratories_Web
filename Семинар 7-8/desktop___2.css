@@ -1,0 +1,161 @@
+/*
+	@name desktop___2
+*/
+/* Only edit this if you know what you are doing! */
+body { margin: 0px; padding: 0px; font-family:"Arial"; overflow-x:hidden; }
+
+/* Only edit this if you know what you are doing! */
+img { position: absolute; display: block; margin: 0px; border: none; padding: 0px; }
+
+/* Only edit this if you know what you are doing! */
+div { position: absolute; }
+
+#content-container { display: block; position: relative; width: 1440px; width: 1440px; height: 1024px; overflow: hidden; display: block;  margin-left: auto; margin-right: auto;  }
+
+#_bg__desktop___2 {
+	top: 0px;
+	left: 0px;
+	width: 1440px;
+	height: 1024px;
+	background:rgba(255,255,255,1);
+}
+
+
+#rectangle_1 {
+	top: 0px;
+	left: 0px;
+	width: 588px;
+	height: 1024px;
+	background:rgba(217,217,217,1);
+}
+
+
+#______ {
+	top: 36px;
+	left: 623px;
+	width: 97px;
+	height: 37px;
+	overflow: hidden;
+	font-family: Roboto;
+	font-size: 20px;
+	text-align: left;
+	color:#000000;
+}
+
+
+#___________ {
+	top: 36px;
+	left: 1108px;
+	width: 159px;
+	height: 41px;
+	overflow: hidden;
+	font-family: Roboto;
+	font-size: 22px;
+	text-align: left;
+	color:#000000;
+}
+
+
+#______________ {
+	top: 36px;
+	left: 730px;
+	width: 184px;
+	height: 37px;
+	overflow: hidden;
+	font-family: Roboto;
+	font-size: 20px;
+	text-align: left;
+	color:#000000;
+}
+
+
+#_____ {
+	top: 39px;
+	left: 1014px;
+	width: 84px;
+	height: 37px;
+	overflow: hidden;
+	font-family: Roboto;
+	font-size: 20px;
+	text-align: left;
+	color:#000000;
+}
+
+
+#_______________________________ {
+	top: 468px;
+	left: 623px;
+	width: 584px;
+	height: 146px;
+	overflow: hidden;
+	font-family: Roboto;
+	font-size: 48px;
+	text-align: left;
+	color:#000000;
+}
+
+
+#_____________________ {
+	top: 639px;
+	left: 623px;
+	width: 303px;
+	height: 45px;
+	overflow: hidden;
+	font-family: Roboto;
+	font-size: 24px;
+	text-align: left;
+	color:#000000;
+}
+
+#round_button_true {
+	top: 21px;
+	left: 1275px;
+	width: 111px;
+	height: 66px;
+}
+#button {
+	top: 0px;
+	left: 0px;
+	width: 111px;
+	height: 60px;
+}
+
+#sign_up {
+	top: 23px;
+	left: 32px;
+	width: 66px;
+	height: 24px;
+	overflow: hidden;
+	font-family: Montserrat;
+	font-size: 14px;
+	font-weight: bold;
+	text-align: left;
+	color:#FFFFFF;
+}
+
+
+#rectangle_2 {
+	top: 723px;
+	left: 618px;
+	width: 206px;
+	height: 68px;
+	background:rgba(217,217,217,1);
+}
+
+
+#______ek1 {
+	top: 747px;
+	left: 686px;
+	width: 93px;
+	height: 34px;
+	overflow: hidden;
+	font-family: Montserrat;
+	font-size: 20px;
+	font-weight: bold;
+	text-align: left;
+	color:#000000;
+}
+
+
+
+/* Add your custom CSS here */

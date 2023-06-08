@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <meta charset="UTF-8">
+    <title>4 Лабораторная работа (Методы объекта, this. Конструкторы, создание объектов через "new"Методы объекта, this. Конструкторы, создание объектов через "new")</title>
+</head>
+<body>
+<h1>1.	Скопируйте код объекта и проанализируйте его работу:</h1>
+<p>
+    let user = {
+    name: "Джон",
+    age: 30
+    };
+
+    user.sayHi = function() {
+    alert("Привет!");
+    };
+
+    user.sayHi(); // Привет!
+</p>
+<p class="master"></p>
+<script>
+
+    let user = {
+        name: "Джон",
+        age: 30
+    };
+
+    user.sayHi = function() {
+        var master = document.getElementsByClassName("master");
+        master[0].innerHTML = 'Привет!';
+    };
+
+    user.sayHi(); // Привет!
+
+</script>
+
+
+<h1>2.	 Создайте объект – информация о покупателе (не менее 5 строк) и выведите три из них.</h1>
+<p class="master"></p>
+<p class="master"></p>
+<p class="master"></p>
+<script>
+
+    const Customer = {
+        name: "Дмитрий",
+        surname: "Кондрашов",
+        age: 20,
+        email: "213695@edu.fa.ru",
+        phone: "+79851163989",
+        address: {
+            city: "Москва",
+            street: "Островитянова",
+            house: 18,
+            corpus: 4,
+        },
+    };
+
+    var master2 = document.getElementsByClassName("master");
+    master2[1].innerHTML = 'Имя покупателя: ' + Customer.name;
+    master2[2].innerHTML = 'Фамилия покупателя: ' + Customer.surname;
+    master2[3].innerHTML = 'Телефон покупателя: ' + Customer.phone;
+
+</script>
+
+
+<h1>3.	Создайте объекты пользователи, заказы и рестораны с соответствующими значениями.
+    Организуйте вывод информации из объектов по условию.</h1>
+<p class="master"></p>
+<p class="master"></p>
+<script>
+
+    const user1 = {
+        name: "Дмитрий",
+        surname: "Кондрашов",
+        age: 20,
+        email: "213695@edu.fa.ru",
+        phone: "+79851163989",
+        address: {
+            city: "Москва",
+            street: "ул. Островитянова",
+            house: 18,
+            corpus: 4,
+        },
+    };
+    const user2 = {
+        name: "Алексей",
+        surname: "Горький",
+        age: 18,
+        email: "lex.gor@yandex.ru",
+        phone: "+79187784148",
+        address: {
+            city: "Тверь",
+            street: "ул. Победы",
+            house: 4,
+            corpus: 1,
+        },
+    };
+
+    const restaurant1 = {
+        name: "Додо пицца",
+        address: {
+            street: "Профсоюзная",
+            city: "Москва",
+        },
+        phone: "88003330060",
+        menu: [
+            {
+                name: "Песто (большая)",
+                price: 889
+            },
+            {
+                name: "Аррива (большая)",
+                price: 829
+            },
+            {
+                name: "Цыплёнок барбекю (большая)",
+                price: 999
+            },
+        ]
+    };
+
+    const restaurant2 = {
+        name: "Coffix",
+        address: {
+            street: "1917 года",
+            city: "Тверь",
+        },
+        phone: "8888413434",
+        menu: [
+            {
+                name: "Капучино",
+                price: 180
+            },
+            {
+                name: "Латте",
+                price: 200
+            },
+            {
+                name: "Чай чёрный",
+                price: 120
+            },
+            {
+                name: "Чай зелёный",
+                price: 140
+            },
+        ]
+    };
+
+    const order1 = {
+        date: "2023-05-11",
+        user: user1,
+        restaurant: restaurant1,
+        items: [
+            {
+                name: "Песто (большая)",
+                price: 889,
+                quantity: 1
+            },
+            {
+                name: "Аррива (большая)",
+                price: 829,
+                quantity: 1
+            }
+        ],
+        total: 1718
+    };
+
+    const order2 = {
+        date: "2023-05-01",
+        user: user2,
+        restaurant: restaurant2,
+        items: [
+            {
+                name: "Чай зелёный",
+                price: 140,
+                quantity: 2
+            },
+        ],
+        total: 280
+    };
+
+    var master3 = document.getElementsByClassName("master");
+    master3[4].innerHTML = 'Заказ' + 1 + ' сделан ' + order1.date + ' покупателем ' + order1.user.name + ' по адресу ' + order1.user.address.street + ' в ' + order1.restaurant.name;
+    master3[5].innerHTML = 'Заказ' + 2 + ' сделан ' + order2.date + ' покупателем ' + order2.user.name + ' по адресу ' + order2.user.address.street + ' в ' + order2.restaurant.name;
+
+</script>
+
+
+<h1>4.	При помощи функции-конструктора и оператора "new" создайте функцию, выводящую имена вашей группы.</h1>
+<script>
+
+    function ListNames(names) {
+        let ul = document.createElement('ul');
+
+        for (let name of names) {
+            let li = document.createElement('li');
+            li.textContent = name;
+            ul.appendChild(li);
+        }
+
+        document.body.appendChild(ul);
+    }
+
+    let names = ['Дмитрий', 'Артём', 'Денис', 'Айдар', 'Карим', 'Кирилл', 'Глеб'];
+    let list = new ListNames(names);
+
+
+</script>
+
+
+<h1>5.	Используя конструктор, создайте объект – студент. Передайте конструктору параметры,
+    определяющие, как создавать объект, и что в него записывать.</h1>
+<p class="master"></p>
+<script>
+
+    function Student(name, university, group, mean_score) {
+        this.name = name;
+        this.university = university;
+        this.group = group;
+        this.mean_score = mean_score;
+        this.print = function() {
+            var master4 = document.getElementsByClassName("master");
+            master4[6].innerHTML = "Студент " + this.name + " из университета " + this.university + " из группы " + this.group + ". Средний балл: " + this.mean_score
+        };
+    }
+    let student = new Student("Дмитрий", "ФУ", "ПИ21-4", 93.5);
+    student.print();
+
+</script>
+
+</body>
+</html>
